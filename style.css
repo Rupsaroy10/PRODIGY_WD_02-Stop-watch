@@ -1,0 +1,172 @@
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    font-family: serif;
+    background: url(clock.jpeg) no-repeat center/cover;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Stopwatch Circles */
+.outer-circle {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    border: 8px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.inner-circle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    gap: 4px;
+    border-radius: 50%;
+    background: rgba(52, 30, 30, 0.097);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Time Text */
+.text {
+    color: white;
+}
+
+.text.hours {
+    font-size: 2.1rem; 
+    font-weight: bolder;
+}
+
+.text.minutes {
+    font-size: 1.9rem;
+    font-weight: 900;
+
+}
+
+.text.seconds {
+    font-size: 1.7rem;
+    font-weight: 600;
+
+}
+
+.text.miliseconds {
+    font-size: 1.2rem; 
+    font-weight: 500;
+}
+
+/* Buttons */
+.button-wrapper {
+    margin-top: 20px;
+}
+
+.button {      
+    border-radius: 8px;  
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: space-between;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  transform: scale(1.09);
+}
+
+.play {
+    background: black;
+    border: 2px solid white;
+    color: white;
+}
+
+.pause {
+    background: black;
+    border: 2px solid white;
+    color: white;
+}
+
+.reset {
+    background: black;
+    border: 2px solid white;
+    color: white;
+}
+
+.lap {
+    background: black;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Laps List */
+.laps-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    color: white;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.laps-list::-webkit-scrollbar {
+    display: none;
+}
+
+.laps-list li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+/* Clear All Button */
+.laps-clear-button {
+    margin-top: 10px;
+    font-family: serif;
+    font-weight: 600;
+    background: #5f0808;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.laps-clear-button:hover {
+    background: #ed0606;
+    border: 1px solid white;
+    transform: scale(1.08);
+}
